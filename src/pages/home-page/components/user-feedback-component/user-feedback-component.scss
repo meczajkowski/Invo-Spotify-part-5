@@ -1,18 +1,19 @@
 .user-feedback-component {
   margin-top: 2rem;
+
   width: 496px;
   height: 414px;
 
-  background-color: var(--modal-background-color);
   padding: 2rem;
+  border-radius: var(--border-radius-m);
 
-  border-radius: 24px;
+  background-color: var(--modal-background-color);
 
   & &__title {
     // Typography starts
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-l);
+    line-height: var(--font-size-l);
     letter-spacing: 0em;
     // Typography ends
 
@@ -31,9 +32,9 @@
 
   & &__single-rate-tile {
     // Typography starts
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 24px;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-m);
+    line-height: var(--font-size-l);
     letter-spacing: 0em;
     // Typography ends
 
@@ -45,19 +46,21 @@
     width: 80px;
 
     border: 1px solid var(--rate-tile-border-color);
-    border-radius: 16px;
+    border-radius: var(--border-radius-s);
   }
 
   & &__labels-container {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
+
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 
   & &__single-label {
     // Typography starts
-    font-weight: 500;
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-m);
     line-height: 19px;
     letter-spacing: -0.01em;
     // Typography ends

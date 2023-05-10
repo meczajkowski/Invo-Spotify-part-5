@@ -4,7 +4,7 @@
 import { UserFeedbackModal } from "./components/user-feedback-modal/user-feedback-modal";
 import "./home-page.scss";
 
-setTimeout(() => {
-  // show UserFeedbackModal 1s after page has been loaded
-  UserFeedbackModal();
-}, 1000);
+// setTimeout(() => {
+//   // show UserFeedbackModal 1s after page has been loaded
+//   UserFeedbackModal();
+// }, 1000);
