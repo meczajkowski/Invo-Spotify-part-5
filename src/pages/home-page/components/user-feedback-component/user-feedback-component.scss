@@ -1,3 +1,73 @@
 .user-feedback-component {
-    
+  margin-top: 2rem;
+  width: 496px;
+  height: 414px;
+
+  background-color: var(--modal-background-color);
+  padding: 2rem;
+
+  border-radius: 24px;
+
+  & &__title {
+    // Typography starts
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    // Typography ends
+
+    max-width: 265px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  //   & &__rating-container {
+  //   }
+
+  & &__rates-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & &__single-rate-tile {
+    // Typography starts
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    // Typography ends
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 64px;
+    width: 80px;
+
+    border: 1px solid var(--rate-tile-border-color);
+    border-radius: 16px;
+  }
+
+  & &__labels-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & &__single-label {
+    // Typography starts
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.01em;
+    // Typography ends
+
+    width: 90px;
+
+    color: var(--single-label-text-color);
+
+    &--to-right {
+      text-align: right;
+    }
+  }
 }
