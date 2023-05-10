@@ -47,6 +47,17 @@
 
     border: 1px solid var(--rate-tile-border-color);
     border-radius: var(--border-radius-s);
+    transition: border 0.2s, background-color 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid var(--single-label-border-color-hover);
+    }
+
+    &:active {
+      border: 1px solid var(--primary-color);
+      background-color: var(--primary-color-alpha-008);
+    }
   }
 
   & &__labels-container {
