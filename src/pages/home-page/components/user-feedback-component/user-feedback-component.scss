@@ -54,7 +54,7 @@
       border: 1px solid var(--single-label-border-color-hover);
     }
 
-    &:active {
+    &[data-selected] {
       border: 1px solid var(--primary-color);
       background-color: var(--primary-color-alpha-008);
     }
