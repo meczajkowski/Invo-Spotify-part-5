@@ -6,6 +6,8 @@ button {
   border-radius: 444px;
 
   &.btn-primary {
+    background-color: var(--primary-color);
+
     &[disabled] {
       background-color: var(--background-color-disabled);
       color: var(--on-background-color-disabled);
