@@ -29,7 +29,7 @@ export const UserFeedbackModal = () => {
   Swal.fire({
     template: "#user-feedback-modal",
     showConfirmButton: false,
-    width: "492px",
+    width: "496px",
     padding: 0,
     customClass: {
       container: "user-feedback-modal",

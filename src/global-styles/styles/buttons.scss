@@ -31,10 +31,13 @@ button {
 }
 
 .btn-primary__text {
+  // Typography starts
+  font-size: var(--font-size-m);
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
+  // Typography ends
 
   width: 70px;
   margin: auto;

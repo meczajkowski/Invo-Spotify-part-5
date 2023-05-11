@@ -1,7 +1,6 @@
 .user-feedback-component {
   width: 496px;
   height: 414px;
-
   padding: 2rem;
   border-radius: var(--border-radius-m);
 
@@ -12,7 +11,8 @@
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-l);
     line-height: var(--font-size-l);
-    letter-spacing: 0em;
+    letter-spacing: 0.004em;
+    text-align: left;
     // Typography ends
 
     max-width: 265px;
@@ -72,6 +72,7 @@
     font-weight: var(--font-weight-m);
     line-height: 19px;
     letter-spacing: -0.01em;
+    text-align: left;
     // Typography ends
 
     width: 90px;
