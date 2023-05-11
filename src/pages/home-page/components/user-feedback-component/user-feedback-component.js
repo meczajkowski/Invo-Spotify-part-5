@@ -5,7 +5,9 @@ export const UserFeedbackComponent = () => {
   const allRatesTiles = userFeedbackComponent.querySelectorAll(
     ".user-feedback-component__single-rate-tile"
   );
-
+  const confirmButton = userFeedbackComponent.querySelector(
+    ".user-feedback-component__confirm-button"
+  );
   let currentRating;
 
   addListenersToAllRatesTiles();
@@ -22,9 +24,7 @@ export const UserFeedbackComponent = () => {
           currentRating = null;
         }
 
-        console.log(`current rating: ${currentRating}`);
-
-        // afterRatingChanged(singleRateTile);
+        afterRatingChanged(singleRateTile);
       });
     });
   }
@@ -35,5 +35,18 @@ export const UserFeedbackComponent = () => {
         singleRateTile.removeAttribute("data-selected");
       }
     });
+  }
+
+  function afterRatingChanged(singleRateTile) {
+    disselectOtherRatings(singleRateTile);
+    setProperButtonState(currentRating);
+  }
+
+  function setProperButtonState() {
+    if (currentRating) {
+      confirmButton.removeAttribute("disabled");
+    } else {
+      confirmButton.setAttribute("disabled", true);
+    }
   }
 };
