@@ -5,6 +5,10 @@ button {
   border: none;
   border-radius: 444px;
 
+  @media (max-width: 520px) {
+    padding-block: 17px;
+  }
+
   &.btn-primary {
     background-color: var(--primary-color);
     transition: 0.2s;
@@ -47,11 +51,15 @@ button {
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: center;
   // Typography ends
 
   width: 70px;
   margin: auto;
+
+  @media (max-width: 520px) {
+    line-height: 14px;
+  }
 }
 
 .btn-primary__loader {

@@ -3,7 +3,6 @@
 /// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
 
 :root {
-  font-size: 16px;
   --primary-color: var(--color-green-500);
   --primary-color-dark: var(--color-green-700);
   --primary-color-light: var(--color-green-300);
@@ -64,6 +63,12 @@
 
   --font-weight-l: 700;
   --font-weight-m: 500;
+
+  @media (max-width: 520px) {
+    --font-size-l: 18px;
+    --font-size-m: 14px;
+    --font-size-s: 12px;
+  }
 }
 
 :root {
@@ -71,4 +76,9 @@
   --border-radius-l: 50px;
   --border-radius-m: 24px;
   --border-radius-s: 16px;
+
+  @media (max-width: 520px) {
+    --border-radius-m: 18px;
+    --border-radius-s: 12px;
+  }
 }
