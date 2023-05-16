@@ -1,6 +1,6 @@
 .user-feedback-component {
   width: 496px;
-  height: 414px;
+//   height: 414px;
   padding: 2rem;
   border-radius: var(--border-radius-m);
 
@@ -8,8 +8,14 @@
 
   @media (max-width: 520px) {
     width: 343px;
-    height: 314px;
+    // height: 314px;
     padding: 1rem;
+  }
+
+  @media (max-width: 363px) {
+    width: 100%;
+    // height: 314px;
+    // padding: 1rem;
   }
 
   & &__icon-container {
@@ -48,6 +54,10 @@
   & &__rates-container {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 363px) {
+      gap: 4px;
+    }
   }
 
   & &__single-rate-tile {
@@ -72,6 +82,10 @@
     @media (max-width: 520px) {
       height: 48px;
       width: 56px;
+    }
+
+    @media (max-width: 301px) {
+      height: 40px;
     }
 
     &:hover {
