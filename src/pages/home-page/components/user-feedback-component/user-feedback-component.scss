@@ -52,9 +52,20 @@
       border: 1px solid var(--single-label-border-color-hover);
     }
 
+    &[data-disabled] {
+      &:hover {
+        cursor: not-allowed;
+        border: 1px solid var(--rate-tile-border-color);
+      }
+    }
+
     &[data-selected] {
       border: 1px solid var(--primary-color);
       background-color: var(--primary-color-alpha-008);
+
+      &[data-disabled]:hover {
+        border: 1px solid var(--primary-color);
+      }
     }
   }
 

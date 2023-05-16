@@ -9,12 +9,18 @@ export const UserFeedbackComponent = () => {
     ".user-feedback-component__confirm-button"
   );
   let currentRating;
+  let isClickedProceedBtn = false;
 
   addListenersToAllRatesTiles();
+  sendRate();
+
+  //////////////////////////////////////////////////////////////////////////////////
 
   function addListenersToAllRatesTiles() {
     allRatesTiles.forEach((singleRateTile) => {
       singleRateTile.addEventListener("click", () => {
+        if (isClickedProceedBtn) return;
+
         singleRateTile.toggleAttribute("data-selected");
         disselectOtherRatings(singleRateTile);
 
@@ -48,5 +54,16 @@ export const UserFeedbackComponent = () => {
     } else {
       confirmButton.setAttribute("disabled", true);
     }
+  }
+
+  function sendRate() {
+    confirmButton.addEventListener("click", () => {
+      isClickedProceedBtn = true;
+      allRatesTiles.forEach((singleRateTile) => {
+        singleRateTile.setAttribute("data-disabled", 1);
+      });
+      confirmButton.setAttribute("data-loading", 1);
+      confirmButton.setAttribute("disabled", true);
+    });
   }
 };
