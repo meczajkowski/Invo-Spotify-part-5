@@ -27,6 +27,17 @@ button {
         background-color: var(--background-color-disabled);
       }
     }
+
+    &[data-loading="1"] {
+      .btn-primary__text {
+        display: none;
+      }
+
+      .btn-primary__loader {
+        display: block;
+        height: 16px;
+      }
+    }
   }
 }
 
