@@ -62,7 +62,7 @@ export const UserFeedbackComponent = () => {
       return;
     }
 
-    if (currentRating > 3 && currentRating <= 6) {
+    if (currentRating > 2 && currentRating <= 6) {
       confirmButton.removeAttribute("disabled");
       return;
     }
