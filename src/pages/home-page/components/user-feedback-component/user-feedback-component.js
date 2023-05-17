@@ -8,12 +8,19 @@ export const UserFeedbackComponent = () => {
   const confirmButton = userFeedbackComponent.querySelector(
     ".user-feedback-component__confirm-button"
   );
+  const opinionContainer = userFeedbackComponent.querySelector(
+    ".user-feedback-component__opinion-container"
+  );
+  const opinionInput = userFeedbackComponent.querySelector(
+    ".user-feedback-component__opinion-input"
+  );
   let currentRating;
   let isClickedProceedBtn = false;
 
   addListenersToAllRatesTiles();
   sendRate();
 
+  console.log(null < 3);
   //////////////////////////////////////////////////////////////////////////////////
 
   function addListenersToAllRatesTiles() {
@@ -46,13 +53,29 @@ export const UserFeedbackComponent = () => {
   function afterRatingChanged(singleRateTile) {
     disselectOtherRatings(singleRateTile);
     setProperButtonState(currentRating);
+    setOpinionContainerState(currentRating);
   }
 
   function setProperButtonState() {
-    if (currentRating) {
-      confirmButton.removeAttribute("disabled");
-    } else {
+    if (!currentRating) {
       confirmButton.setAttribute("disabled", true);
+      return;
+    }
+
+    if (currentRating > 3 && currentRating <= 6) {
+      confirmButton.removeAttribute("disabled");
+      return;
+    }
+
+    if (currentRating < 3 && currentRating >= 1) {
+      const opinionChangeHandler = () => {
+        opinionInput.value
+          ? confirmButton.removeAttribute("disabled")
+          : confirmButton.setAttribute("disabled", true);
+      };
+
+      opinionInput.addEventListener("change", opinionChangeHandler);
+      opinionInput.addEventListener("input", opinionChangeHandler);
     }
   }
 
@@ -62,8 +85,19 @@ export const UserFeedbackComponent = () => {
       allRatesTiles.forEach((singleRateTile) => {
         singleRateTile.setAttribute("data-disabled", 1);
       });
+      opinionInput.setAttribute("disabled", true);
       confirmButton.setAttribute("data-loading", 1);
       confirmButton.setAttribute("disabled", true);
     });
+  }
+
+  function setOpinionContainerState(currentRating) {
+    if (currentRating < 3 && currentRating >= 1) {
+      opinionInput.value = "";
+      opinionInput.focus();
+      opinionContainer.setAttribute("data-opinion-container-expanded", true);
+    } else {
+      opinionContainer.removeAttribute("data-opinion-container-expanded");
+    }
   }
 };
