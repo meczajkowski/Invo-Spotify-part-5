@@ -20,7 +20,6 @@ export const UserFeedbackComponent = () => {
   addListenersToAllRatesTiles();
   sendRate();
 
-  console.log(null < 3);
   //////////////////////////////////////////////////////////////////////////////////
 
   function addListenersToAllRatesTiles() {
@@ -68,6 +67,7 @@ export const UserFeedbackComponent = () => {
     }
 
     if (currentRating < 3 && currentRating >= 1) {
+      confirmButton.setAttribute("disabled", true);
       const opinionChangeHandler = () => {
         opinionInput.value
           ? confirmButton.removeAttribute("disabled")
