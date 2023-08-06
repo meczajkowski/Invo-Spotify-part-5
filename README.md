@@ -5,9 +5,22 @@
 This project involves a user feedback modal that appears once every three days. If you close it but wish to view it again, you need to remove the 'userFeedbackModalClosedTimestamp' from your browser's local storage or open the project in a private browser window (recommended).
 
 You can provide a rating from 1 to 5. Upon selecting a rating of 1 or 2, a window will open requesting additional information regarding such a rating, which is required to submit the review. Once the review is submitted, the button's state will change to "loading." No further action will occur.
+
 ## Demo
 See the project live here:
 https://mc-spotify-part5.netlify.app/
+## Related
+
+Additionally, you can explore other projects related to Spotify by clicking on the following links:
+
+- [Spotify Part 1](https://mc-spotify-part1.netlify.app/)
+- [Spotify Part 2](https://mc-spotify-part1.netlify.app/)
+- [Spotify Part 3](https://mc-spotify-part1.netlify.app/)
+- [Spotify Part 4](https://mc-spotify-part1.netlify.app/)
+- [Spotify Part 5](https://mc-spotify-part1.netlify.app/)
+- [Spotify Part 6](https://mc-spotify-part1.netlify.app/)
+
+
 ## Tech Stack
 
 - JavaScript, 
