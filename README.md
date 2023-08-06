@@ -1,37 +1,60 @@
-# INVO Academy JS Starter with Vite
 
-In order to see this file in preview mode in VS Code, press ```Ctrl + Shift + V```
+# Spotify User Feedback Modal
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/)
+This project involves a user feedback modal that appears once every three days. If you close it but wish to view it again, you need to remove the 'userFeedbackModalClosedTimestamp' from your browser's local storage or open the project in a private browser window (recommended).
 
-## How to start your challenge
+You can provide a rating from 1 to 5. Upon selecting a rating of 1 or 2, a window will open requesting additional information regarding such a rating, which is required to submit the review. Once the review is submitted, the button's state will change to "loading." No further action will occur.
+## Demo
+See the project live here:
+https://mc-spotify-part5.netlify.app/
+## Tech Stack
 
-This is a Universal Starter for all the Basic INVO Academy Challenges. In order to start your challenge, remove all the content inside ```<div id="home-page"></div>``` and start coding :) 
+- JavaScript, 
+- SCSS, 
+- Vite
 
-The main file structure is prepered, please make yourslef familiar with it. Your goal is to explore it and extend on your own while development. Feel free to remove all the extra files and code that you don't need.
 
-## How to run your project
+## Screenshots
 
-If you run your this project for the first time, you need to install npm dependencies by typing
+![App Screenshot](https://github.com/meczajkowski/Invo-Spotify-part-5/assets/110562040/af3f4f3a-34bf-4535-ad9a-3761c08e330b)
 
-```npm install``` (this is for the one-time installation only)
 
-In order to run your project in a development mode type
+## Run Locally
 
-```npm run dev```
+Clone the project
 
-then open your browser and go to the url showed in the terminal. That's it, if you make any changes in the code, browser will synchronize automatically.
+```bash
+  git clone https://github.com/meczajkowski/Invo-Spotify-part-5.git
+```
 
-## Building your project
+Go to the project directory
 
-When you are ready to put your project on the Internet, you need to build it. For building, type
+```bash
+  cd Invo-Spotify-part-5
+```
 
-```npm run build```
+Install dependencies
 
-This commend will create a dist folder. This is the folder containing your whole application and that's the only folder that you need to deploy to the server in order to make your app publically available.
+```bash
+  npm install
+```
 
-## More informations about folder structure and deploying your application you can find inside INVO Academy Knowledge Base
+Start the server
 
+```bash
+  npm run dev
+```
+
+
+## Authors
+
+- [@meczajkowski](https://www.github.com/octokatherine)
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at:
+-  michal.erik.czajkowski@gmail.com,
+- https://www.linkedin.com/in/michalerikczajkowski/
 
